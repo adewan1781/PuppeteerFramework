@@ -1,6 +1,7 @@
+@login
 Feature: login action
 
-@login
+
 Scenario: valid login
 Given user navigates to box app
 Then "Box Login" page should appear

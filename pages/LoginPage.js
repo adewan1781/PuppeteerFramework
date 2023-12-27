@@ -4,10 +4,11 @@ import Utility from '../utils/Utility.js';
 
  class LoginPage{
 
-  static utils = new Utility();
+  static wait = new Utility();
   LoginPage()
   {
     console.log('inside class');
+    // this.utils = new Utility();
   }
     async loginPage(page)
   {
@@ -16,7 +17,8 @@ import Utility from '../utils/Utility.js';
         const inputSelector = 'input[id="login-email"]';
         await page.type(inputSelector,"qacult.demo@gmail.com");
         await page.click('#login-submit');
-        await utils.sleep(2000);
+        // await wait.sleep(2000);
+        await page.waitForSelector('#password-login');
         await page.type('#password-login',"testing123");
     }
   }
@@ -28,7 +30,8 @@ import Utility from '../utils/Utility.js';
     await page.type(inputSelector,"abcdef@gmail.com");
   
     await page.click('#login-submit');
-    await utils.sleep(2000);
+    // await wait.sleep(2000);
+    await page.waitForSelector('#password-login');
     await page.type('#password-login',"qwertyuiop");
   }
 

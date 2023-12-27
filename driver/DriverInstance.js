@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer';  
+import CucumberHooks from '../features/step_definations/CucumberHooks.js';
 
 class DriverInstance{
     DriverInstance(){
@@ -31,6 +32,23 @@ class DriverInstance{
           return page;
         }
         throw new Error('Browser not launched');
+      }
+
+      async closePage(page) {
+        const page2 = CucumberHooks.pageMap.get("pageVal");
+        if (page2) {
+          await page.close();
+        }
+      }
+
+      async deleteAllCookies(){
+        // const page1 = CucumberHooks.pageMap.get("pageVal");
+        // const cookies = await page1.cookies();
+        // // const cookieJson = JSON.stringify(cookies)
+        // for(ck in cookies){
+        //     await page1.deleteCookie(ck);
+        // }
+        // // await page1.deleteCookie(cookieJson);
       }
 }
 

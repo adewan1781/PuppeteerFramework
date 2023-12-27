@@ -4,14 +4,16 @@ import { Then } from "@cucumber/cucumber";
 import assert from "assert"
 import { Before } from "@cucumber/cucumber";
 import CucumberHooks from "./CucumberHooks.js";
-import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
+// import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
 import { setDefaultTimeout } from "@cucumber/cucumber";
 import Utility from "../../utils/Utility.js";
 setDefaultTimeout(60 * 1000);
 
-const browserController = CucumberHooks.browserController;
+// const browserController = CucumberHooks.browserController;
 let page;
 const utils = new Utility();
+const loginPage = CucumberHooks.loginPage;
+const afPage = CucumberHooks.afPage;
 
 
 Before(async () => {
@@ -20,14 +22,14 @@ Before(async () => {
 
 Given('user navigates to box app', async () => {
   page = CucumberHooks.pageMap.get("pageVal");
-  console.log("browserController " + browserController);
+  console.log("afPage " + afPage);
   console.log("page " + page)
-  await browserController.navigateToBox(page);
+  await loginPage.navigateToBox(page);
   return console.log("step-1");
 });
 
 When('user enters correct username and password', async () => {
-  await browserController.loginPage(page);
+  await loginPage.loginPage(page);
   return console.log("step-2");
 });
 
@@ -46,30 +48,28 @@ Then('{string} page should appear', async (string) => {
 });
 
 When('clicks on login button', async () => {
-  await browserController.clickLoginSubmit(page);
+  await loginPage.clickLoginSubmit(page);
   await utils.sleep(5000);
   return console.log("login button clicked");
 });
 
 When('user clicks on account menu button', async () => {
-  await browserController.clickAccountBtn(page);
+  await afPage.clickAccountBtn(page);
   return console.log("account button clicked");
 });
 
 When('logouts from app', async () => {
-  await browserController.logout(page);
+  await afPage.logout(page);
   return console.log("logout clicked");
 });
 
-
-
 When('user enters wrong username and password', async () => {
-  await browserController.loginWithWrongCredentials(page);
+  await loginPage.loginWithWrongCredentials(page);
   return console.log("wrong credentials");
 });
 
 Then('error message should appear', async () => {
-  await browserController.displayError(page);
+  await afPage.displayError(page);
   return console.log("error displayed");
 });
 

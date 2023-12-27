@@ -3,7 +3,7 @@ import { When } from "@cucumber/cucumber";
 import { Then } from "@cucumber/cucumber";
 import assert from "assert"
 import { BeforeAll, AfterAll } from "@cucumber/cucumber";
-import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
+// import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
 import { setDefaultTimeout } from "@cucumber/cucumber";
 import CucumberHooks from "./CucumberHooks.js";
 import Utility from "../../utils/Utility.js";
@@ -12,6 +12,7 @@ setDefaultTimeout(60 * 1000);
 
 const browserController = CucumberHooks.browserController;
 const loginPage = CucumberHooks.loginPage;
+const afPage = CucumberHooks.afPage;
 
 const utils = new Utility();
 let  page;
@@ -39,7 +40,7 @@ When('User clicks on Menu button', async ()=>{
 
  Then('bookmark button should appear', async ()=> {
     // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+    return 'pending';bbbbb
   });
 
 When('clicks on bookmark button', async ()=>{
@@ -56,7 +57,7 @@ When('clicks on bookmark button', async ()=>{
  });
 
  When('User will enter bookmark details', async ()=>{
-    browserController.nameToBeInput = "new"+ Math.floor(Math.random() * 1000);
+    afPage.nameToBeInput = "new"+ Math.floor(Math.random() * 1000);
     await page.type('input[data-resin-target=\'urlinput\']',browserController.nameToBeInput);
    return console.log("step-4");
  });
