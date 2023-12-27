@@ -1,36 +1,26 @@
 import { BeforeAll, AfterAll } from "@cucumber/cucumber";
 import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
+import DriverInstance from "../../Driver/DriverInstance.js";
+import LoginPage from "../../pages/LoginPage.js";
 
-class CucumberHooks{
+class CucumberHooks {
     static browserController = new script8_createDeleteBookmark();
+    static loginPage = new LoginPage();
+
+    static driver = new DriverInstance();
     static pageMap = new Map();
-    // static page; 
-    // static{
-    //     async()=>{
-    //         await CucumberHooks.browserController.launchBrowser();
-    //         page = await CucumberHooks.browserController.createPage();
-    //     }
-
-    // }
-
-    // static async launch(){
-    //     await CucumberHooks.browserController.launchBrowser();
-    //     CucumberHooks.page = await CucumberHooks.browserController.createPage();
-    // }
 }
 
-BeforeAll(async() => {
-    await CucumberHooks.browserController.launchBrowser();
-    
-    // const page = await CucumberHooks.browserController.createPage();
-    CucumberHooks.pageMap.set("pageVal",await CucumberHooks.browserController.createPage());
-    // await CucumberHooks.launch();
-    console.log("successful");
-   });
 
-   AfterAll(async() => {
-    await CucumberHooks.browserController.closeBrowser();
-     console.log("successful done");
-   });
+BeforeAll(async () => {
+    await CucumberHooks.driver.launchBrowser();
+    CucumberHooks.pageMap.set("pageVal", await CucumberHooks.driver.createPage());
+    console.log("successful");
+});
+
+AfterAll(async () => {
+    await CucumberHooks.driver.closeBrowser();
+    console.log("successful done");
+});
 
 export default CucumberHooks;
