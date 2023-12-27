@@ -1,0 +1,21 @@
+#Author       :  Yash
+#Scenario     :  Verify Left Side Bar Links from Box app
+#Application  :  Box
+Feature: Login to the Box App
+
+    @boxleftsidebar
+    Scenario: Login with Examples Table
+        Given user navigates to box app
+        Then "Box Login" page should appear
+        When user enters correct username and password
+        And clicks on login button
+        Then "All Files" page should appear
+        When user verifies the following left sidebar links:
+            | All Files |
+            | Recents   |
+            | Synced    |
+            | Trash     |
+            | Notes     |
+        When user clicks on account menu button
+        And logouts from app
+        Then "Box Login" page should appear
