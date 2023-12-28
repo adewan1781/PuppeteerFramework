@@ -1,10 +1,10 @@
 import puppeteer from 'puppeteer';
 import assert from 'assert'
-import Utility from '../utils/Utility.js';
+// import Utility from '../utils/Utility.js';
 
  class LoginPage{
 
-  static wait = new Utility();
+  // static wait = new Utility();
   LoginPage()
   {
     console.log('inside class');
