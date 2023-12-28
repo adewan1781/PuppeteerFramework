@@ -28,11 +28,6 @@ Given('user navigates to box app', async () => {
   return console.log("step-1");
 });
 
-When('user enters correct username and password', async () => {
-  await loginPage.loginPage(page);
-  return console.log("step-2");
-});
-
 Then('{string} page should appear', async (string) => {
   if (string == "Box Login") {
     await utils.sleep(4000);
@@ -63,13 +58,14 @@ When('logouts from app', async () => {
   return console.log("logout clicked");
 });
 
-When('user enters wrong username and password', async () => {
-  await loginPage.loginWithWrongCredentials(page);
-  return console.log("wrong credentials");
-});
 
 Then('error message should appear', async () => {
   await afPage.displayError(page);
   return console.log("error displayed");
+});
+
+When('user enters correct/wrong username {string} and password {string}', async (string, string2)=> {
+  await loginPage.loginPage(page, string, string2);
+  return console.log("step-2");
 });
 
