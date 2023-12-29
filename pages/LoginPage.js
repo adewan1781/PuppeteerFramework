@@ -1,23 +1,23 @@
 import puppeteer from 'puppeteer';
 import assert from 'assert'
-// import Utility from '../utils/Utility.js';
+import PuppeteerControls from '../controls/PuppeteerControls.js';
 
- class LoginPage{
 
-  // static wait = new Utility();
+ class LoginPage extends PuppeteerControls{
+
+ 
   LoginPage()
   {
     console.log('inside class');
-    // this.utils = new Utility();
+    
   }
  
   async navigateToBox(page){
-    await page.goto('https://app.box.com', {timeout: 0, waitUntil: 'networkidle0'});
+    await this.navigate(page, 'https://app.box.com');
   }
 
     async clickLoginSubmit(page){
-      await page.click('#login-submit-password');
-
+      await this.clickSelector(page, '#login-submit-password');
     }
 
     async loginPage(page,uname,pword)
@@ -25,11 +25,10 @@ import assert from 'assert'
       if(page)
       {
           const inputSelector = 'input[id="login-email"]';
-          await page.type(inputSelector,uname);
-          await page.click('#login-submit');
-          // await wait.sleep(2000);
-          await page.waitForSelector('#password-login');
-          await page.type('#password-login',pword);
+          await this.sendKeys(page,inputSelector,uname);
+          await this.clickSelector(page, '#login-submit');
+          await this.waitForSelector(page, '#password-login');
+          await this.sendKeys(page, '#password-login', pword);
       }
     }
  }
