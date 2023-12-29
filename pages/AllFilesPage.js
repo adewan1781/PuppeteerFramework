@@ -79,6 +79,21 @@ class AllFilesPage{
       await page.waitForSelector('div.form-error');
      }
 
+     async getleftSideBarLinkTexts(page){
+        await page.waitForSelector('button.create-dropdown-menu-toggle-button:not([aria-disabled])');
+        const sideBarTexts = []
+        let x=0;
+        const options = await page.$$('a[class*=\'CollapsibleSidebarMenuItem__StyledLink\'] span[class*=\'menuItemLabel\']');
+        for(let el in options){
+            const text = await (await options[el].getProperty('textContent')).jsonValue();
+            // console.log(text);
+            sideBarTexts[x] = text;
+            x++;
+        }
+        // console.log(sideBarTexts);
+        return sideBarTexts;
+     }
+
 }
 
 export default AllFilesPage;
