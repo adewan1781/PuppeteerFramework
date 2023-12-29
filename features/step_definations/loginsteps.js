@@ -16,9 +16,7 @@ const loginPage = CucumberHooks.loginPage;
 const afPage = CucumberHooks.afPage;
 
 
-Before(async () => {
-  console.log("successful before scenario");
-});
+
 
 Given('user navigates to box app', async () => {
   page = CucumberHooks.pageMap.get("pageVal");

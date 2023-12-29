@@ -1,44 +1,26 @@
 import puppeteer from 'puppeteer';  
-import CucumberHooks from '../features/step_definations/CucumberHooks.js';
 
-class DriverInstance{
+import PuppeteerControls from '../controls/PuppeteerControls.js';
+
+class DriverInstance extends PuppeteerControls{
     DriverInstance(){
         this.browser = null;
     
     }
     async launchBrowser() {
-        this.browser = await puppeteer.launch({headless: false,
-            defaultViewport: null,
-            args: ['--start-maximized'] 
-    
-        });
+        return await super.launchBrowser();
       }
      
       async closeBrowser() {
-        if (this.browser) {
-          await this.browser.close();
-        }
+        await super.closeBrowser();
       }
      
       async createPage() {
-        if (this.browser) {
-          const page = await this.browser.newPage();
-          
-          await page.setViewport({
-            width: 1280,
-            height: 500 ,
-            deviceScaleFactor: 1,
-          });
-          return page;
-        }
-        throw new Error('Browser not launched');
+        return await this.openPageTab();
       }
 
       async closePage(page) {
-        const page2 = CucumberHooks.pageMap.get("pageVal");
-        if (page2) {
-          await page.close();
-        }
+        await this.closePageTab(page);
       }
 
       async deleteAllCookies(){

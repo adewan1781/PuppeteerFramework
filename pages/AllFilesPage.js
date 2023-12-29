@@ -1,8 +1,9 @@
 import puppeteer from 'puppeteer';
 import assert from 'assert'
 import Utility from '../utils/Utility.js';
+import PuppeteerControls from '../controls/PuppeteerControls.js';
 
-class AllFilesPage{
+class AllFilesPage extends PuppeteerControls{
     AllFilesPage(){
         this.nameToBeInput = null;
         this.utils = new Utility();
@@ -64,15 +65,14 @@ class AllFilesPage{
      }
 
      async clickAccountBtn(page){
-      await page.waitForSelector('button[data-resin-target=\'accountmenu\']');
-      await page.click('button[data-resin-target=\'accountmenu\']',{clickCount: 1});
+             await this.waitForSelector(page, 'button[data-resin-target=\'accountmenu\']');
+            await this.clickSelector(page, 'button[data-resin-target=\'accountmenu\']');
      }
 
      async logout(page){
       await page.waitForSelector('a[data-testid=\'account-menu-logout\']');
       await page.click('a[data-testid=\'account-menu-logout\']',{clickCount: 1});
       await page.waitForSelector('input[id="login-email"]');
-    //   await this.utils.sleep(2000);
      }
 
      async displayError(page){
@@ -86,7 +86,6 @@ class AllFilesPage{
         const options = await page.$$('a[class*=\'CollapsibleSidebarMenuItem__StyledLink\'] span[class*=\'menuItemLabel\']');
         for(let el in options){
             const text = await (await options[el].getProperty('textContent')).jsonValue();
-            // console.log(text);
             sideBarTexts[x] = text;
             x++;
         }
