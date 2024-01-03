@@ -23,6 +23,3 @@ Then successful "deletion" message should appear
 When user clicks on account menu button
 And logouts from app
 Then "Box Login" page should appear
-
-
-
