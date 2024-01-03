@@ -4,6 +4,7 @@ import { BeforeAll, AfterAll, After } from "@cucumber/cucumber";
 import DriverInstance from "../../Driver/DriverInstance.js";
 import LoginPage from "../../pages/LoginPage.js";
 import AllFilesPage from "../../pages/AllFilesPage.js";
+import CreateDeleteDocumentPage from "../../pages/CreateDeleteDocumentPage.js";
 
 class CucumberHooks {
     static loginPage = new LoginPage();
@@ -11,6 +12,7 @@ class CucumberHooks {
     static driver = new DriverInstance();
     static pageMap = new Map();
     static browserArray = [];
+    static createDeleteDocument = new CreateDeleteDocumentPage();
 }
 let browser;
 
@@ -35,9 +37,9 @@ After(async () => {
 
 });
 
-Before(async () => {
+// Before(async () => {
 
 
-});
+// });
 
 export default CucumberHooks;

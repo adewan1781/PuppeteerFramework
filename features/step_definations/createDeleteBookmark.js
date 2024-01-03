@@ -31,12 +31,12 @@ let  page;
     return console.log("step-1");
  });
 
-When('User clicks on Menu button', async ()=>{
-    await page.waitForSelector('button.create-dropdown-menu-toggle-button:not([aria-disabled])');
-    await page.click('button.create-dropdown-menu-toggle-button:not([aria-disabled])');
-    await utils.sleep(2000);
-   return console.log("step-2");
- });
+// When('User clicks on Menu button', async ()=>{
+//     await page.waitForSelector('button.create-dropdown-menu-toggle-button:not([aria-disabled])');
+//     await page.click('button.create-dropdown-menu-toggle-button:not([aria-disabled])');
+//     await utils.sleep(2000);
+//    return console.log("step-2");
+//  });
 
  Then('bookmark button should appear', async ()=> {
     // Write code here that turns the phrase above into concrete actions
