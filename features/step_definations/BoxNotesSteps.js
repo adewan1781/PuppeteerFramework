@@ -34,37 +34,49 @@ When('user clicks on Notes button in left side bar', async ()=> {
 
 
   When('user create a new note', async ()=> {
-    console.log("this is new page: "+await page.title());
-    await page.waitForTimeout(50000);
-    frame = nPage.returnIframe(page);
-    console.log(frame)
-    nPage.createBoxNote(frame);
-    // await page.waitForTimeout(5000);
+    // console.log("this is new page: "+await page.title());
+    await page.waitForTimeout(5000);
+    frame = await nPage.returnIframe(page);
+    // console.log(frame)
+    await nPage.createBoxNote(frame);
   });
 
 
   When('user rename the title {string}', async (title)=>{
-
+    await nPage.timeoutWait(frame, 10000);
+    await nPage.renameNote(frame, title);
+    // nameToBeInput = "new"+ Math.floor(Math.random() * 1000);
+    // await frame.waitForSelector('div[id="mod-pad-2"] input[placeholder="Add a Title"]'); 
+    // await frame.click('div[id="mod-pad-2"] input[placeholder="Add a Title"]');        
+    // await frame.type('div[id="mod-pad-2"] input[placeholder="Add a Title"]',"TEST_CKJ123");
   });
 
+  Then('page title should be as {string}', async (string)=> {
+    await nPage.timeoutWait(frame, 5000);
+    await nPage.verifyTabTitle(page, string);
+  });
 
   When('user clicks on options button', async ()=>{
+    
+    await nPage.clickOptionsMenu(frame);
 
   });
 
 
 
   When('delete the newly created note', async ()=> {
-
+    await nPage.clickDelete(frame);
   });
 
 
-  Then('successful {string} message should appear',async (string)=>{
- 
+  Then('successful note deletion message should appear',async ()=>{
+    await nPage.verifyNoteDeletion(frame);
   });
 
 
 
   When('user closes the current page', async ()=> {
-
+    await page.close();
+    page = CucumberHooks.pageMap.get("pageVal");
+    await page.bringToFront();
   });

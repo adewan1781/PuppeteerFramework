@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 class Utility {
       async sleep(milliseconds) {
-            console.log("sleeping");
+            // console.log("sleeping");
             return new Promise(resolve => setTimeout(resolve, milliseconds));
       }
 }

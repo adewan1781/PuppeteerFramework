@@ -13,10 +13,10 @@ When user clicks on Notes button in left side bar
 Then "Box Notes" page tab should appear
 When user create a new note
 And user rename the title "notes_test"
-Then "notes_test" page should appear
+Then page title should be as "notes_test"
 When user clicks on options button
 And delete the newly created note
-Then successful "deletion" message should appear
+Then successful note deletion message should appear
 When user closes the current page
 Then "All Files" page should appear
 When user clicks on account menu button
