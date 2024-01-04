@@ -27,16 +27,19 @@ Given('user navigates to box app', async () => {
 });
 
 Then('{string} page should appear', async (string) => {
-  if (string == "Box Login") {
-    await utils.sleep(4000);
-    console.log(await page.title() + "  correct title for login page");
-    assert.deepStrictEqual(await page.title(), "Box | Login", "Page title is not correct");
-  }
-  else if (string == "All Files") {
-    await utils.sleep(2000);
-    console.log(await page.title() + "  correct title for " + string);
-    assert.deepStrictEqual(await page.title(), "All Files | Powered by Box", "Page title is not correct");
-  }
+  await utils.sleep(1000);
+  console.log(await loginPage.pageTitle(page, string) + "  correct title for " + string);
+
+  // if (string == "Box Login") {
+  //   await utils.sleep(4000);
+  //   console.log(await page.title() + "  correct title for login page");
+  //   assert.deepStrictEqual(await page.title(), "Box | Login", "Page title is not correct");
+  // }
+  // else if (string == "All Files") {
+  //   await utils.sleep(2000);
+  //   console.log(await page.title() + "  correct title for " + string);
+  //   assert.deepStrictEqual(await page.title(), "All Files | Powered by Box", "Page title is not correct");
+  // }
   return '';
 });
 

@@ -12,6 +12,7 @@ class PuppeteerControls{
             this.browser = await puppeteer.launch({headless: false,
                 defaultViewport: null,
                 args: ['--start-maximized'] 
+                // slowMo: 250
             });
         return this.browser;
         }
@@ -104,6 +105,72 @@ class PuppeteerControls{
             CucumberHooks.browserArray.push(this.browser);
             throw ex;
         }
+      }
+
+      async verifyPageTitle(page, title){
+        try{
+           const currentTitle = await page.title();
+        //    console.log(currentTitle);
+           if(currentTitle.includes(title)){
+                return currentTitle;
+           }
+           else{
+            throw new Error("Page title not correct. Expected: "+title+" Currenttitle: "+currentTitle);
+           }
+        }
+        catch(ex){
+            await this.launchBrowser();
+            CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+            CucumberHooks.browserArray.push(this.browser);
+            throw ex;
+        }
+        
+      }
+
+      async getOpenedTabList(){
+        try{
+            console.log(CucumberHooks.browserArray.length)
+            this.browser = CucumberHooks.browserArray[0];
+            // console.log(this.browser+" browser value");
+            const pageList = await this.browser.pages();
+            console.log("NUMBER TABS:", pageList.length);
+            return pageList;
+         }
+         catch(ex){
+             await this.launchBrowser();
+             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             CucumberHooks.browserArray.push(this.browser);
+             throw ex;
+         }
+      }
+
+      async bringTabToFront(tabList, index){
+        try{
+          
+            await tabList[index].bringToFront();
+         }
+         catch(ex){
+             await this.launchBrowser();
+             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             CucumberHooks.browserArray.push(this.browser);
+             throw ex;
+         }
+      }
+
+      async returnFrameContent(page, frameSelector){
+        try{
+          
+            const framecontext = await page.$(frameSelector);
+            const iframe = await framecontext.contentFrame();
+            return iframe;
+         }
+         catch(ex){
+             await this.launchBrowser();
+             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             CucumberHooks.browserArray.push(this.browser);
+             throw ex;
+         }
+        
       }
 
 }

@@ -6,7 +6,7 @@ Feature: Login to the Box App
     @boxleftsidebar
     Scenario: Verify Left Side bar links
         Given user navigates to box app
-        Then "Box Login" page should appear
+        Then "Box | Login" page should appear
         When user enters correct username and password
         And clicks on login button
         Then "All Files" page should appear

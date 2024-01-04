@@ -31,5 +31,10 @@ import PuppeteerControls from '../controls/PuppeteerControls.js';
           await this.sendKeys(page, '#password-login', pword);
       }
     }
+
+    async pageTitle(page, title){
+       return await this.verifyPageTitle(page, title);
+    }
+
  }
 export default LoginPage;
