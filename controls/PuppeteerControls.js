@@ -176,6 +176,30 @@ class PuppeteerControls{
         
       }
 
+      async evaluateWithText(page, sel){
+        try{
+            const heading = await page.$eval(sel,(element=>element.textContent));
+           return heading;
+         }
+         catch(ex){
+             await this.launchBrowser();
+             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             CucumberHooks.browserArray.push(this.browser);
+             throw ex;
+         }
+      }
+
+      async mouseHover(page, selector){
+        try{
+            await page.hover(selector);
+         }
+         catch(ex){
+             await this.launchBrowser();
+             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             CucumberHooks.browserArray.push(this.browser);
+             throw ex;
+         }
+      }
 }
 
 export default PuppeteerControls;

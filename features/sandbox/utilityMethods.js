@@ -26,7 +26,14 @@ import assert from 'assert'
  
   async createPage() {
     if (this.browser) {
-      return await this.browser.newPage();
+      const page = await this.browser.newPage();
+      
+      await page.setViewport({
+        width: 1280,
+        height: 500 ,
+        deviceScaleFactor: 1,
+      });
+      return page;
     }
     throw new Error('Browser not launched');
   }
@@ -41,18 +48,14 @@ import assert from 'assert'
     if(page)
     {
         await page.goto('https://app.box.com');
-        await page.setViewport({
-          width: 1920,
-          height: 1080 ,
-          deviceScaleFactor: 1,
-        });
+        
         const inputSelector = 'input[id="login-email"]';
         await page.type(inputSelector,"qacult.demo@gmail.com");
         await page.click('#login-submit');
         await this.sleep(2000);
         await page.type('#password-login',"testing123");
         await page.click('#login-submit-password');
-        //await this.sleep(12000);
+        await this.sleep(12000);
     }
   }
 
@@ -160,6 +163,30 @@ import assert from 'assert'
       await page.waitForSelector('a[data-testid=\'account-menu-logout\']');
       await page.click('a[data-testid=\'account-menu-logout\']',{clickCount: 1});
       await this.sleep(3000);
+     }
+
+     async createDeleteDocument(page){
+      // await page.waitForTimeout(10000);
+      await page.waitForSelector('button.create-dropdown-menu-toggle-button:not([aria-disabled])');
+      await page.click('button.create-dropdown-menu-toggle-button:not([aria-disabled])');
+      await page.waitForSelector('li[aria-label=\'Create a new Word Document\']');
+      await page.click('li[aria-label=\'Create a new Word Document\']',{clickCount: 1});
+      // await this.sleep(12000);
+
+      let selector = "div.modal-header";
+      await page.waitForSelector(selector);
+      // await this.sleep(selector);
+      const heading = await page.$eval('div.modal-header',(element=>element.textContent));
+      console.log(heading);
+      await this.sleep(2000);
+      assert.strictEqual(heading, 'Create a Word Document', 'Assertion failed: Element content does not match expected value');
+      console.log('Assertion Passed');
+
+      let nameToBeInput = "new"+ Math.floor(Math.random() * 1000);
+      await page.type('input[name=\'name\']',nameToBeInput);
+      await page.click('button.btn-primary',{clickCount: 1});
+      await this.sleep(12000);
+
      }
 }
  
