@@ -35,7 +35,10 @@ When('user clicks on Notes button in left side bar', async ()=> {
 
   When('user create a new note', async ()=> {
     // console.log("this is new page: "+await page.title());
-    await page.waitForTimeout(5000);
+    // await page.waitForTimeout(5000);
+    // frame = await page.waitForFrame(async frame => {
+    //   return frame.name() === 'service_iframe';
+    // });
     frame = await nPage.returnIframe(page);
     // console.log(frame)
     await nPage.createBoxNote(frame);
@@ -52,7 +55,7 @@ When('user clicks on Notes button in left side bar', async ()=> {
   });
 
   Then('page title should be as {string}', async (string)=> {
-    await nPage.timeoutWait(frame, 5000);
+    await nPage.timeoutWait(frame, 8000);
     await nPage.verifyTabTitle(page, string);
   });
 

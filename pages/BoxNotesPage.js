@@ -42,7 +42,7 @@ import Utility from '../utils/Utility.js';
         //     waitUntil: 'networkidle0',
         // });
         // await page.waitForTimeout(15000);
-        return this.returnFrameContent(page,  'iframe[name=\'service_iframe\']');
+        return this.returnFrameContent(page,  'service_iframe');
         
    }
 

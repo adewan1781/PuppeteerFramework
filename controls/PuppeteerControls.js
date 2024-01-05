@@ -157,11 +157,14 @@ class PuppeteerControls{
          }
       }
 
-      async returnFrameContent(page, frameSelector){
+      async returnFrameContent(page, frameName){
         try{
           
-            const framecontext = await page.$(frameSelector);
-            const iframe = await framecontext.contentFrame();
+            // const framecontext = await page.$(frameSelector);
+            // const iframe = await framecontext.contentFrame();
+            const iframe = await page.waitForFrame(async frame => {
+                return frame.name() === frameName;
+              });
             return iframe;
          }
          catch(ex){

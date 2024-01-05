@@ -1,5 +1,5 @@
-@cdfolder
-Feature: create delete folder in box app
+@bookmark
+Feature: create and delete bookmark in box app
 
 Background: 
 Given user navigates to box app
@@ -8,16 +8,16 @@ When user enters correct username "qacult.demo@gmail.com" and password "testing1
 And clicks on login button
 Then "All Files" page should appear
 
-Scenario: Folder create annd delete action
+Scenario: Create/delete bookmark action
 When user clicks on "New" button
-And user clicks on "Create Folder" link
-Then new folder popup should open
-When user inputs new folder name with "new_folder" and random text
-And selects permission as "Viewer"
+And user clicks on "Create Bookmark" link
+Then new bookmark popup should open
+When user inputs new bookmark name with "new_bookmark" and random text
+And user enter name and description as "new_bookmark"
 And user clicks on "Create" button
-Then successful "folder creation" message should appear
+Then successful "bookmark creation" message should appear
 And user closes notification message
-When user selects newly created folder row
+When user selects newly created bookmark row
 And user clicks on "Trash" button
 And user clicks "Ok" button to confirm action
 Then successful "deletion" message should appear
