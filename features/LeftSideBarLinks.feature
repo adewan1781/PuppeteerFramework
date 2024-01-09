@@ -6,8 +6,8 @@ Feature: Login to the Box App
     @boxleftsidebar @all
     Scenario: Verify Left Side bar links
         Given user navigates to box app
-        Then "Box | Login" page should appear
-        When user enters correct username and password
+Then "Box | Login" page should appear
+When user enters correct username "qacult.demo@gmail.com" and password "testing123"
         And clicks on login button
         Then "All Files" page should appear
         When user verifies the following left sidebar links:
@@ -18,4 +18,4 @@ Feature: Login to the Box App
             | Notes     |
         When user clicks on account menu button
         And logouts from app
-        Then "Box Login" page should appear
+Then "Box | Login" page should appear
