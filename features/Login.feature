@@ -1,4 +1,4 @@
-@login
+@login @all
 Feature: login action
 
 

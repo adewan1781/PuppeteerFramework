@@ -45,6 +45,30 @@ class AllFilesPage extends PuppeteerControls {
         console.log('Assertion Passed');
     }
 
+    async folderCreationNotification(page, entryName){
+        const successMessageText = '"'+entryName+'" was created successfully.';
+        // console.log(successMessageText);  
+        const notiSelector = 'div.notification.info.wrap>span';
+        const notiText = " was created successfully.";
+ 
+        await this.waitForTextToAppear(page, notiSelector, notiText);
+        const heading = await this.evaluateWithText(page, notiSelector);
+        assert.strictEqual(heading, successMessageText, 'Assertion failed: Element content does not match expected value');
+        console.log('Assertion Passed');
+    }
+    async folderRenameNotification(page, entryName){
+        const successMessageText = 'The folder has been renamed to '+entryName+'.';
+         console.log(successMessageText);  
+        const notiSelector = 'div.notification.info.wrap>span';
+        const notiText = "The folder has been renamed to ";
+ 
+        await this.waitForTextToAppear(page, notiSelector, notiText);
+        const heading = await this.evaluateWithText(page, notiSelector);
+        console.log(heading); 
+        assert.strictEqual(heading, successMessageText, 'Assertion failed: Element content does not match expected value');
+        console.log('Assertion Passed');
+    }
+    
     async deletionNotification(page) {
         await this.waitForSelector(page, 'div[class*=\'notification info wrap\']');
         const successMessageText = "Item successfully moved to trash.";
@@ -106,6 +130,22 @@ class AllFilesPage extends PuppeteerControls {
         return sideBarTexts;
     }
 
+     async MouseOverMoreOptins(page) {
+        await this.waitForSelector(page, 'button[aria-label=\'More Options\']');
+        await this.mouseHover(page, 'button[aria-label=\'More Options\']');
+        await this.clickSelector(page, 'button[aria-label=\'More Options\']');
+        await this.mouseHover(page, '.menu-item:nth-child(5) > span');
+        await this.mouseHover(page, '.submenu > .menu-item:nth-child(2) > span');
+        await this.clickSelector(page, '.submenu > .menu-item:nth-child(2) > span');
+
 }
 
+async clickSaveBtnOnRenameFolder(page) {
+    await this.clickSelector(page, '.btn:nth-child(2) > .btn-content > span');
+    await page.waitForTimeout(5000);
+}
+
+
+
+}
 export default AllFilesPage;

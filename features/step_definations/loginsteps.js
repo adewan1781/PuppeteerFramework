@@ -4,19 +4,14 @@ import { Then } from "@cucumber/cucumber";
 import assert from "assert"
 import { Before } from "@cucumber/cucumber";
 import CucumberHooks from "./CucumberHooks.js";
-// import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
 import { setDefaultTimeout } from "@cucumber/cucumber";
 import Utility from "../../utils/Utility.js";
 setDefaultTimeout(60 * 1000);
 
-// const browserController = CucumberHooks.browserController;
 let page;
 const utils = new Utility();
 const loginPage = CucumberHooks.loginPage;
 const afPage = CucumberHooks.afPage;
-
-
-
 
 Given('user navigates to box app', async () => {
   page = CucumberHooks.pageMap.get("pageVal");
@@ -29,17 +24,6 @@ Given('user navigates to box app', async () => {
 Then('{string} page should appear', async (string) => {
   await utils.sleep(1000);
   console.log(await loginPage.pageTitle(page, string) + "  correct title for " + string);
-
-  // if (string == "Box Login") {
-  //   await utils.sleep(4000);
-  //   console.log(await page.title() + "  correct title for login page");
-  //   assert.deepStrictEqual(await page.title(), "Box | Login", "Page title is not correct");
-  // }
-  // else if (string == "All Files") {
-  //   await utils.sleep(2000);
-  //   console.log(await page.title() + "  correct title for " + string);
-  //   assert.deepStrictEqual(await page.title(), "All Files | Powered by Box", "Page title is not correct");
-  // }
   return '';
 });
 
@@ -58,7 +42,6 @@ When('logouts from app', async () => {
   await afPage.logout(page);
   return console.log("logout clicked");
 });
-
 
 Then('error message should appear', async () => {
   await afPage.displayError(page);

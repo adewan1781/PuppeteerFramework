@@ -22,6 +22,13 @@ When('user clicks on {string} button', async (btnName)=> {
      if(btnName=='Trash'){
         await afPage.clickTrash(page);
      }
+     if(btnName=='More Options'){
+      await afPage.MouseOverMoreOptins(page);
+   }
+   if(btnName=='Save'){
+    await afPage.clickSaveBtnOnRenameFolder(page);
+ }
+   
   });
 
 
@@ -53,6 +60,15 @@ When('user clicks on {string} button', async (btnName)=> {
      
   });
 
+  When('user renames folder name with {string} and random text', async (nameVal)=> {
+    entryName = "RenameFolder"+ Math.floor(Math.random() * 1000);
+      if(nameVal.includes('Rename')){
+        await page.waitForSelector('input[placeholder=\'My Folder\']');
+      await page.type('input[placeholder=\'My Folder\']',entryName);
+    }
+     
+  });
+
   When('selects permission as {string}', async (string)=> {
     await page.select('select[name=\'invite-permission\']', 'Viewer'); 
   });
@@ -72,13 +88,11 @@ When('user clicks on {string} button', async (btnName)=> {
     await afPage.deletionNotification(page);
     }
     if(notiType=='folder creation'){
-        await page.waitForSelector('div[class*=\'notification info wrap\']>span');
-      const successMessageText = "\""+entryName+"\" was created successfully.";
-      console.log(successMessageText);
-      await page.waitForTimeout(800);
-      const heading = await page.$eval('div[class*=\'notification info wrap\']>span',(element=>element.textContent));
-      assert.strictEqual(heading, successMessageText, 'Assertion failed: Element content does not match expected value');
-      console.log('Assertion Passed');
+      
+      await afPage.folderCreationNotification(page, entryName);
+    }
+    if(notiType=='folder rename'){
+        await afPage.folderRenameNotification(page, entryName);
     }
   });
 

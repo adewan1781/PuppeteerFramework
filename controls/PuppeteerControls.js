@@ -200,6 +200,20 @@ class PuppeteerControls{
              throw ex;
          }
       }
+
+      async waitForTextToAppear(page, selector, text){
+        try{
+            await page.waitForFunction(
+                'document.querySelector("'+selector+'").innerText.includes("'+text+'")'
+              );
+         }
+         catch(ex){
+             await this.launchBrowser();
+             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             CucumberHooks.browserArray.push(this.browser);
+             throw ex;
+         }
+      }
 }
 
 export default PuppeteerControls;
