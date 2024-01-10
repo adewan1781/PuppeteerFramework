@@ -107,13 +107,12 @@ class AllFilesPage extends PuppeteerControls {
     }
 
     async logout(page) {
-        await page.waitForSelector('a[data-testid=\'account-menu-logout\']');
-        await page.click('a[data-testid=\'account-menu-logout\']', { clickCount: 1 });
-        await page.waitForSelector('input[id="login-email"]');
+        await this.waitForSelector(page,'a[data-testid=\'account-menu-logout\']');
+        await this.clickSelector(page, 'a[data-testid=\'account-menu-logout\']');
     }
 
     async displayError(page) {
-        await page.waitForSelector('div.form-error');
+        await this.waitForSelector('div.form-error');
     }
 
     async getleftSideBarLinkTexts(page) {
