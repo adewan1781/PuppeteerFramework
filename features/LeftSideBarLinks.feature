@@ -1,7 +1,7 @@
 #Author       :  Yash
 #Scenario     :  Verify Left Side Bar Links from Box app
 #Application  :  Box
-Feature: Login to the Box App
+Feature: Verify Left Side bar links
 
     @boxleftsidebar @all
     Scenario: Verify Left Side bar links

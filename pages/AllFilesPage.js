@@ -112,7 +112,7 @@ class AllFilesPage extends PuppeteerControls {
     }
 
     async displayError(page) {
-        await this.waitForSelector('div.form-error');
+        await this.waitForSelector(page, 'div.form-error');
     }
 
     async getleftSideBarLinkTexts(page) {

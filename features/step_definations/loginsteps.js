@@ -15,8 +15,8 @@ const afPage = CucumberHooks.afPage;
 
 Given('user navigates to box app', async () => {
   page = CucumberHooks.pageMap.get("pageVal");
-  console.log("afPage " + afPage);
-  console.log("page " + page)
+  // console.log("afPage " + afPage);
+  // console.log("page " + page)
   await loginPage.navigateToBox(page);
   return console.log("step-1");
 });

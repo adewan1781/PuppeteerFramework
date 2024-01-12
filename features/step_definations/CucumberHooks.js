@@ -1,5 +1,5 @@
 
-import { BeforeAll, AfterAll, After } from "@cucumber/cucumber";
+import { BeforeAll, AfterAll, After, Before, TestCaseHookDefinition } from "@cucumber/cucumber";
 // import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
 import DriverInstance from "../../Driver/DriverInstance.js";
 import LoginPage from "../../pages/LoginPage.js";
@@ -30,16 +30,25 @@ AfterAll(async () => {
     console.log("successful done");
 });
 
-After(async () => {
+After(async (scenario) => {
     // await CucumberHooks.driver.deleteAllCookies();
-    console.log("after each scenario");
+    const page1 = CucumberHooks.pageMap.get("pageVal");
+    console.log("after each scenario ");
+    const base64 = await page1.screenshot({ encoding: "base64" });
+    // CucumberHooks.attach(base64, { mediaType: 'base64:image/png' })
+    // .attach(base64, 'image/png');
+    // await testcase.attach(base64, { mediaType: 'image/png' });
+    // this.attach('Some text');
 
 
 });
 
-// Before(async () => {
+Before(async (scenario) => {
+    console.log("***********************************");
+    console.log("Starting scenario: "+scenario.pickle.name);
 
+    // testcase.result.log('scenario started');
 
-// });
+});
 
 export default CucumberHooks;
