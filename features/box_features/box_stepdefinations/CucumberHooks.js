@@ -19,49 +19,49 @@ class CucumberHooks {
 }
 let browser;
 
-BeforeAll(async () => {
-    browser = await CucumberHooks.driver.launchBrowser();
-    CucumberHooks.pageMap.set("pageVal", await CucumberHooks.driver.createPage());
-    CucumberHooks.browserArray.push(browser);
-    console.log("successful");
-});
+// BeforeAll(async () => {
+//     browser = await CucumberHooks.driver.launchBrowser();
+//     CucumberHooks.pageMap.set("pageVal", await CucumberHooks.driver.createPage());
+//     CucumberHooks.browserArray.push(browser);
+//     console.log("successful");
+// });
 
-AfterAll(async () => {
-    for(let b in CucumberHooks.browserArray){
-        CucumberHooks.browserArray[b].close();
-    }
-    console.log("successful done");
-});
+// AfterAll(async () => {
+//     for(let b in CucumberHooks.browserArray){
+//         CucumberHooks.browserArray[b].close();
+//     }
+//     console.log("successful done");
+// });
 
-After(async (scenario) => {
-    // await CucumberHooks.driver.deleteAllCookies();
-    const page1 = CucumberHooks.pageMap.get("pageVal");
-    console.log("after each scenario ");
-    const base64 = await page1.screenshot({ encoding: "base64" });
-    // const manager = new AttachmentManager(base64);
-    // manager.create(base64, "image/png");
-    // World.screenshot(base64);
-    // setWorldConstructor;
-    // const world = new World(base64, "image/png", "jadoo");
-    // world.attach(base64.toString('base64'), "base64:image/png");
+// After(async (scenario) => {
+//     // await CucumberHooks.driver.deleteAllCookies();
+//     const page1 = CucumberHooks.pageMap.get("pageVal");
+//     console.log("after each scenario ");
+//     const base64 = await page1.screenshot({ encoding: "base64" });
+//     // const manager = new AttachmentManager(base64);
+//     // manager.create(base64, "image/png");
+//     // World.screenshot(base64);
+//     // setWorldConstructor;
+//     // const world = new World(base64, "image/png", "jadoo");
+//     // world.attach(base64.toString('base64'), "base64:image/png");
 
-    // scenario.attach(base64, "image/png");
-    // World(base64,"screenshot-image","image/png");
-    // new World(base64);
-    // CucumberHooks.attach(base64, { mediaType: 'base64:image/png' })
-    // .attach(base64, 'image/png');
-    // await testcase.attach(base64, { mediaType: 'image/png' });
-    // this.attach('Some text');
+//     // scenario.attach(base64, "image/png");
+//     // World(base64,"screenshot-image","image/png");
+//     // new World(base64);
+//     // CucumberHooks.attach(base64, { mediaType: 'base64:image/png' })
+//     // .attach(base64, 'image/png');
+//     // await testcase.attach(base64, { mediaType: 'image/png' });
+//     // this.attach('Some text');
 
 
-});
+// });
 
-Before(async (scenario) => {
-    console.log("***********************************");
-    console.log("Starting scenario: "+scenario.pickle.name);
+// Before(async (scenario) => {
+//     console.log("***********************************");
+//     console.log("Starting scenario: "+scenario.pickle.name);
 
-    // testcase.result.log('scenario started');
+//     // testcase.result.log('scenario started');
 
-});
+// });
 
 export default CucumberHooks;

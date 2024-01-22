@@ -12,8 +12,8 @@ class PuppeteerControls{
         try{
             this.browser = await puppeteer.launch({headless: false,
                 defaultViewport: null,
-                args: ['--start-maximized'] 
-                // slowMo: 250
+                args: ['--start-maximized'], 
+                slowMo: 35
             });
         return this.browser;
         }
@@ -55,7 +55,7 @@ class PuppeteerControls{
             await page.goto(url, {timeout: 0, waitUntil: 'networkidle0'});
         }
         catch(ex){
-
+            console.log("error while opening url");
             throw ex;
         }
        
@@ -68,6 +68,7 @@ class PuppeteerControls{
         catch(ex){
             await this.launchBrowser();
             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+            UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
             CucumberHooks.browserArray.push(this.browser);
             UnicornHooks.browserArray.push(this.browser);
             throw ex;
@@ -82,6 +83,7 @@ class PuppeteerControls{
         catch(ex){
             await this.launchBrowser();
             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+            UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
             CucumberHooks.browserArray.push(this.browser);
             UnicornHooks.browserArray.push(this.browser);
             throw ex;
@@ -105,6 +107,7 @@ class PuppeteerControls{
         catch(ex){
             await this.launchBrowser();
             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+            UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
             CucumberHooks.browserArray.push(this.browser);
             UnicornHooks.browserArray.push(this.browser);
             throw ex;
@@ -125,6 +128,7 @@ class PuppeteerControls{
         catch(ex){
             await this.launchBrowser();
             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+            UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
             CucumberHooks.browserArray.push(this.browser);
             UnicornHooks.browserArray.push(this.browser);
             throw ex;
@@ -144,6 +148,7 @@ class PuppeteerControls{
          catch(ex){
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
              UnicornHooks.browserArray.push(this.browser);
              throw ex;
@@ -158,6 +163,7 @@ class PuppeteerControls{
          catch(ex){
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
              UnicornHooks.browserArray.push(this.browser);
              throw ex;
@@ -177,6 +183,7 @@ class PuppeteerControls{
          catch(ex){
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
              UnicornHooks.browserArray.push(this.browser);
              throw ex;
@@ -192,6 +199,7 @@ class PuppeteerControls{
          catch(ex){
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
              UnicornHooks.browserArray.push(this.browser);
              throw ex;
@@ -205,6 +213,7 @@ class PuppeteerControls{
          catch(ex){
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
              UnicornHooks.browserArray.push(this.browser);
              throw ex;
@@ -220,11 +229,46 @@ class PuppeteerControls{
          catch(ex){
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
              UnicornHooks.browserArray.push(this.browser);
              throw ex;
          }
       }
+
+      async clearTextField(page, selector){
+        try{
+            let textField = await page.$(selector);
+            await textField.click({clickCount: 3});
+            await textField.press('Backspace'); 
+         }
+         catch(ex){
+             await this.launchBrowser();
+             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+             UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
+             CucumberHooks.browserArray.push(this.browser);
+             UnicornHooks.browserArray.push(this.browser);
+             throw ex;
+         }
+      }
+
+      async uploadFile(page, selector, path){
+        try{
+            const inputUploadHandle = await page.$(selector);
+            inputUploadHandle.scrollIntoView(true);
+            inputUploadHandle.uploadFile(path);
+        }
+        catch(ex){
+            await this.launchBrowser();
+            CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+            UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
+            CucumberHooks.browserArray.push(this.browser);
+            UnicornHooks.browserArray.push(this.browser);
+            throw ex;
+        }
+      }
+
+     
 }
 
 export default PuppeteerControls;
