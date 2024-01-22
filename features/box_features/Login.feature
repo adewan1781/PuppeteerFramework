@@ -1,4 +1,4 @@
-@login @all
+@login @boxall
 Feature: valid and invalid login action
 
 

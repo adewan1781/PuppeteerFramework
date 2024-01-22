@@ -1,4 +1,4 @@
-@boxNotes @all
+@boxNotes @boxall
 Feature: create delete Notes in the box app
 
 Background: 

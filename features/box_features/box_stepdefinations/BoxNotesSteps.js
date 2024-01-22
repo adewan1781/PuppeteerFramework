@@ -5,7 +5,7 @@ import assert from "assert"
 import { Before } from "@cucumber/cucumber";
 import CucumberHooks from "./CucumberHooks.js";
 import { setDefaultTimeout } from "@cucumber/cucumber";
-import BoxNotesPage from "../../pages/BoxNotesPage.js";
+import BoxNotesPage from "../../../pages/box_pages/BoxNotesPage.js";
 setDefaultTimeout(60 * 1000);
 
 let page;

@@ -1,10 +1,10 @@
 
 import { BeforeAll, AfterAll, After, Before, World} from "@cucumber/cucumber";
 // import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
-import DriverInstance from "../../Driver/DriverInstance.js";
-import LoginPage from "../../pages/LoginPage.js";
-import AllFilesPage from "../../pages/AllFilesPage.js";
-import CreateDeleteDocumentPage from "../../pages/CreateDeleteDocumentPage.js";
+import DriverInstance from "../../../Driver/DriverInstance.js";
+import LoginPage from "../../../pages/box_pages/LoginPage.js";
+import AllFilesPage from "../../../pages/box_pages/AllFilesPage.js";
+import CreateDeleteDocumentPage from "../../../pages/box_pages/CreateDeleteDocumentPage.js";
 // import AttachmentManager from "@cucumber/cucumber/lib/runtime/attachment_manager/index.js";
 // import { ICreateAttachment, ICreateLog } from "@cucumber/cucumber"
 //  import World from "./World.js";

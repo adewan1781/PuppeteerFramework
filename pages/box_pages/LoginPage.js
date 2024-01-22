@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import assert from 'assert'
-import PuppeteerControls from '../controls/PuppeteerControls.js';
+import PuppeteerControls from '../../controls/PuppeteerControls.js';
 
 
  class LoginPage extends PuppeteerControls{

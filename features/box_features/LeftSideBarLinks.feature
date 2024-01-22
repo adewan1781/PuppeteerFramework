@@ -3,7 +3,7 @@
 #Application  :  Box
 Feature: Verify Left Side bar links
 
-    @boxleftsidebar @all
+    @boxleftsidebar @boxall
     Scenario: Verify Left Side bar links
         Given user navigates to box app
 Then "Box | Login" page should appear

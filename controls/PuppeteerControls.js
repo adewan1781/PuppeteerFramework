@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer';
-import CucumberHooks from '../features/step_definations/CucumberHooks.js';
+import CucumberHooks from '../features/box_features/box_stepdefinations/CucumberHooks.js';
+import UnicornHooks from '../features/unicorn_features/unicorn_stepdefinations/UnicornHooks.js';
 
 class PuppeteerControls{
 
@@ -68,6 +69,7 @@ class PuppeteerControls{
             await this.launchBrowser();
             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
             CucumberHooks.browserArray.push(this.browser);
+            UnicornHooks.browserArray.push(this.browser);
             throw ex;
         }
 
@@ -81,6 +83,7 @@ class PuppeteerControls{
             await this.launchBrowser();
             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
             CucumberHooks.browserArray.push(this.browser);
+            UnicornHooks.browserArray.push(this.browser);
             throw ex;
         }
       }
@@ -103,6 +106,7 @@ class PuppeteerControls{
             await this.launchBrowser();
             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
             CucumberHooks.browserArray.push(this.browser);
+            UnicornHooks.browserArray.push(this.browser);
             throw ex;
         }
       }
@@ -122,6 +126,7 @@ class PuppeteerControls{
             await this.launchBrowser();
             CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
             CucumberHooks.browserArray.push(this.browser);
+            UnicornHooks.browserArray.push(this.browser);
             throw ex;
         }
         
@@ -140,6 +145,7 @@ class PuppeteerControls{
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
+             UnicornHooks.browserArray.push(this.browser);
              throw ex;
          }
       }
@@ -153,6 +159,7 @@ class PuppeteerControls{
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
+             UnicornHooks.browserArray.push(this.browser);
              throw ex;
          }
       }
@@ -171,6 +178,7 @@ class PuppeteerControls{
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
+             UnicornHooks.browserArray.push(this.browser);
              throw ex;
          }
         
@@ -185,6 +193,7 @@ class PuppeteerControls{
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
+             UnicornHooks.browserArray.push(this.browser);
              throw ex;
          }
       }
@@ -197,6 +206,7 @@ class PuppeteerControls{
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
+             UnicornHooks.browserArray.push(this.browser);
              throw ex;
          }
       }
@@ -211,6 +221,7 @@ class PuppeteerControls{
              await this.launchBrowser();
              CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
              CucumberHooks.browserArray.push(this.browser);
+             UnicornHooks.browserArray.push(this.browser);
              throw ex;
          }
       }

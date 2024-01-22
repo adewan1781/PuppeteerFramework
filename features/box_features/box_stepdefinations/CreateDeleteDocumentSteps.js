@@ -5,7 +5,7 @@ import assert from "assert"
 import { BeforeAll, AfterAll } from "@cucumber/cucumber";
 import { setDefaultTimeout } from "@cucumber/cucumber";
 import CucumberHooks from "./CucumberHooks.js";
-import Utility from "../../utils/Utility.js";
+import Utility from "../../../utils/Utility.js";
 setDefaultTimeout(60 * 1000);
 let page;
 const utils = new Utility();

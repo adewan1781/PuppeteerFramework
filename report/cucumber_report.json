@@ -1,0 +1,1612 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-delete-notes-in-the-box-app;notes-create-and-delete-action",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Notes create and delete action",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1239599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user navigates to box app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3185792900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1033797699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user enters correct username \"qacult.demo@gmail.com\" and password \"testing123\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 746610499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "clicks on login button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6610499100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "\"All Files\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1008159300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "user clicks on Notes button in left side bar",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2126041999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "\"Box Notes\" page tab should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 240309400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "user create a new note",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2513139499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "user rename the title \"notes_test\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10090526299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "page title should be as \"notes_test\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:57"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 8837438499,
+              "error_message": "Error: Page title not correct. Expected: notes_test Currenttitle: Untitled Note 2024-01-22 15.19.55\n    at BoxNotesPage.verifyPageTitle (file:///D:/PuppeteerFramework/controls/PuppeteerControls.js:122:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async BoxNotesPage.verifyTabTitle (file:///D:/PuppeteerFramework/pages/box_pages/BoxNotesPage.js:36:26)\n    at async World.<anonymous> (file:///D:/PuppeteerFramework/features/box_features/box_stepdefinations/BoxNotesSteps.js:59:5)\n    at async wrapPromiseWithTimeout (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\time.js:57:12)\n    at async Object.run (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\user_code_runner.js:64:22)\n    at async Object.run (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\runtime\\step_runner.js:51:26)\n    at async TestCaseRunner.invokeStep (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\runtime\\test_case_runner.js:111:16)\n    at async TestCaseRunner.runStep (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\runtime\\test_case_runner.js:260:26)\n    at async D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\runtime\\test_case_runner.js:191:44"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "user clicks on options button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:62"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "delete the newly created note",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:70"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "successful note deletion message should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:75"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "user closes the current page",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\BoxNotesSteps.js:81"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "\"All Files\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "user clicks on account menu button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:36"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "logouts from app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:41"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 137218599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@boxNotes",
+            "line": 1
+          },
+          {
+            "name": "@boxall",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-delete-notes-in-the-box-app",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "create delete Notes in the box app",
+    "tags": [
+      {
+        "name": "@boxNotes",
+        "line": 1
+      },
+      {
+        "name": "@boxall",
+        "line": 1
+      }
+    ],
+    "uri": "features\\box_features\\BoxNotesScript.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-and-delete-bookmark-in-box-app;create/delete-bookmark-action",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Create/delete bookmark action",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3575799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user navigates to box app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2623914399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1017137599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user enters correct username \"qacult.demo@gmail.com\" and password \"testing123\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 734617000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "clicks on login button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6760330399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "\"All Files\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1003814400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "user clicks on \"New\" button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95349100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "user clicks on \"Create Bookmark\" link",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 161549599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "new bookmark popup should open",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 477071499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "user inputs new bookmark name with \"new_bookmark\" and random text",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106413800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "user enter name and description as \"new_bookmark\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:78"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "user clicks on \"Create\" button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5099593899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "successful \"bookmark creation\" message should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 835793799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "user closes notification message",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3094413700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "user selects newly created bookmark row",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 200657199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "user clicks on \"Trash\" button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132144299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "user clicks \"Ok\" button to confirm action",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 175330100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "successful \"deletion\" message should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1926726400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "user closes notification message",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3080565099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "user clicks on account menu button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54461900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "logouts from app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1252546700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1007575500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 129011199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@bookmark",
+            "line": 1
+          },
+          {
+            "name": "@boxall",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-and-delete-bookmark-in-box-app",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "create and delete bookmark in box app",
+    "tags": [
+      {
+        "name": "@bookmark",
+        "line": 1
+      },
+      {
+        "name": "@boxall",
+        "line": 1
+      }
+    ],
+    "uri": "features\\box_features\\CreateDeleteBookmark.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create,rename,-delete-folder-in-box-app;folder-create,-rename-and-delete-action",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Folder create, rename and delete action",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 567899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user navigates to box app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2017789900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1020356500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "user enters correct username \"kurumkarsarika1994@gmail.com\" and password \"sarika12345@A\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 672508699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "clicks on login button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6481908099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "\"All Files\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1014448699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "user clicks on \"New\" button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68293100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "user clicks on \"Create Folder\" link",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152560599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "new folder popup should open",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 165890200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "user inputs new folder name with \"new_folder\" and random text",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 486279099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "selects permission as \"Viewer\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18413599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "user clicks on \"Create\" button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5084222300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "successful \"folder creation\" message should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34099300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "user closes notification message",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3096294099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "user selects newly created folder row",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 194773399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "user clicks on \"More Options\" button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 344702400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "user renames folder name with \"Rename_folder\" and random text",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 330853700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "user clicks on \"Save\" button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5090941400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "successful \"folder rename\" message should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13257899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "user closes notification message",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3085879099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "user clicks on \"Trash\" button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87915500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "user clicks \"Ok\" button to confirm action",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128522799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "successful \"deletion\" message should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2150047300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "user closes notification message",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\CreateDeleteItemSteps.js:100"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3078009600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "user clicks on account menu button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 61402200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "logouts from app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1214973700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1025865700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 109231699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@crdfolder",
+            "line": 1
+          },
+          {
+            "name": "@boxall",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "create,rename,-delete-folder-in-box-app",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "create,Rename, delete folder in box app",
+    "tags": [
+      {
+        "name": "@crdfolder",
+        "line": 1
+      },
+      {
+        "name": "@boxall",
+        "line": 1
+      }
+    ],
+    "uri": "features\\box_features\\CreateRenameDeleteFolder.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "verify-left-side-bar-links;verify-left-side-bar-links",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Verify Left Side bar links",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 602499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user navigates to box app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1902256300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1018788300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user enters correct username \"qacult.demo@gmail.com\" and password \"testing123\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 691110100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "clicks on login button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6480494299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "\"All Files\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1005120399
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "All Files"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Recents"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Synced"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Trash"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Notes"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 13,
+            "name": "user verifies the following left sidebar links:",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\LeftSideLinksSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63592100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "user clicks on account menu button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42919199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "logouts from app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1241776000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1019248899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 89429399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@boxleftsidebar",
+            "line": 6
+          },
+          {
+            "name": "@boxall",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "verify-left-side-bar-links",
+    "line": 4,
+    "keyword": "Feature",
+    "name": "Verify Left Side bar links",
+    "tags": [],
+    "uri": "features\\box_features\\LeftSideBarLinks.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "valid-and-invalid-login-action;valid-login",
+        "keyword": "Scenario Outline",
+        "line": 16,
+        "name": "valid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 520200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to box app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2080195199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1017570100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "user enters correct username \"qacult.demo@gmail.com\" and password \"testing123\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 634613900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "clicks on login button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6462953899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "\"All Files\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1004604099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "user clicks on account menu button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62219599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "logouts from app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1531157899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 2226614400,
+              "error_message": "Error: Page title not correct. Expected: Box | Login Currenttitle: Enterprise for AMIT | Powered by Box\n    at LoginPage.verifyPageTitle (file:///D:/PuppeteerFramework/controls/PuppeteerControls.js:122:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async LoginPage.pageTitle (file:///D:/PuppeteerFramework/pages/box_pages/LoginPage.js:36:15)\n    at async World.<anonymous> (file:///D:/PuppeteerFramework/features/box_features/box_stepdefinations/loginsteps.js:26:15)\n    at async wrapPromiseWithTimeout (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\time.js:57:12)\n    at async Object.run (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\user_code_runner.js:64:22)\n    at async Object.run (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\runtime\\step_runner.js:51:26)\n    at async TestCaseRunner.invokeStep (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\runtime\\test_case_runner.js:111:16)\n    at async TestCaseRunner.runStep (D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\runtime\\test_case_runner.js:260:26)\n    at async D:\\PuppeteerFramework\\node_modules\\@cucumber\\cucumber\\lib\\runtime\\test_case_runner.js:191:44"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 119221299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@boxall",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "valid-and-invalid-login-action;valid-login",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "valid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 716399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to box app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2700288899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1019015199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "user enters correct username \"pfighter@gmail.com\" and password \"axa12345\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 705207600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "clicks on login button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6700542999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "\"All Files\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1007357900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "user clicks on account menu button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 87122399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "logouts from app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1265444499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1009946099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 102443500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@boxall",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "valid-and-invalid-login-action;invalid-login",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "invalid login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 833899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "user navigates to box app",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1910700099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "\"Box | Login\" page should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1013722199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "user enters wrong username \"abcdefgh@xyz.com\" and password \"zxcvbbnm\"",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 681466000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "clicks on login button",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5649665800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "error message should appear",
+            "match": {
+              "location": "file:\\D:\\PuppeteerFramework\\features\\box_features\\box_stepdefinations\\loginsteps.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23061800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 97745299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@boxall",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "valid-and-invalid-login-action",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "valid and invalid login action",
+    "tags": [
+      {
+        "name": "@login",
+        "line": 1
+      },
+      {
+        "name": "@boxall",
+        "line": 1
+      }
+    ],
+    "uri": "features\\box_features\\Login.feature"
+  }
+]

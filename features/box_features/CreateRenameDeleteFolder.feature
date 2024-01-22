@@ -1,4 +1,4 @@
-@crdfolder @all
+@crdfolder @boxall
 Feature: create,Rename, delete folder in box app
 
 Background: 

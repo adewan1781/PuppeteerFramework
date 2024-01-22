@@ -5,7 +5,7 @@ import assert from "assert"
 import { Before } from "@cucumber/cucumber";
 import CucumberHooks from "./CucumberHooks.js";
 import { setDefaultTimeout } from "@cucumber/cucumber";
-import Utility from "../../utils/Utility.js";
+import Utility from "../../../utils/Utility.js";
 setDefaultTimeout(60 * 1000);
 
 let page;
@@ -22,14 +22,14 @@ Given('user navigates to box app', async () => {
 });
 
 Then('{string} page should appear', async (string) => {
-  await utils.sleep(1000);
+  await Utility.sleep(1000);
   console.log(await loginPage.pageTitle(page, string) + "  correct title for " + string);
   return '';
 });
 
 When('clicks on login button', async () => {
   await loginPage.clickLoginSubmit(page);
-  await utils.sleep(5000);
+  await Utility.sleep(5000);
   return console.log("login button clicked");
 });
 

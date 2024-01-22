@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import assert from 'assert'
-import PuppeteerControls from '../controls/PuppeteerControls.js';
-import Utility from '../utils/Utility.js';
+import PuppeteerControls from '../../controls/PuppeteerControls.js';
+import Utility from '../../utils/Utility.js';
 
 
  class BoxNotesPage extends PuppeteerControls{

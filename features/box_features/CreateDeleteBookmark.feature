@@ -1,4 +1,4 @@
-@bookmark @all
+@bookmark @boxall
 Feature: create and delete bookmark in box app
 
 Background: 

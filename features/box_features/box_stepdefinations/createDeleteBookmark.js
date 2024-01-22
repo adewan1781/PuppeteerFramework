@@ -6,7 +6,7 @@ import { BeforeAll, AfterAll } from "@cucumber/cucumber";
 // import script8_createDeleteBookmark from "../../script8_createDeleteBookmark.js"
 import { setDefaultTimeout } from "@cucumber/cucumber";
 import CucumberHooks from "./CucumberHooks.js";
-import Utility from "../../utils/Utility.js";
+import Utility from "../../../utils/Utility.js";
 setDefaultTimeout(60 * 1000);
 
 
