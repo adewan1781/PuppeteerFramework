@@ -268,6 +268,21 @@ class PuppeteerControls{
         }
       }
 
+      async getElementList(page, selector){
+        try{
+            const options = await page.$$(selector);
+            return options;
+        }
+        catch(ex){
+            await this.launchBrowser();
+            CucumberHooks.pageMap.set("pageVal", await this.openPageTab());
+            UnicornHooks.pageMap.set("pageVal", await this.openPageTab());
+            CucumberHooks.browserArray.push(this.browser);
+            UnicornHooks.browserArray.push(this.browser);
+            throw ex;
+        }
+      }
+
      
 }
 

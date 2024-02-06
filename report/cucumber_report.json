@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 3560200
+              "duration": 747800
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 5,
             "name": "user navigates to unicorn app",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:16"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:18"
             },
             "result": {
               "status": "passed",
-              "duration": 12566300000
+              "duration": 15026206699
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 6,
             "name": "unicorn \"Login\" page should appear",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:24"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 786902700
+              "duration": 761670899
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2600765500
+              "duration": 2446759699
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 8,
             "name": "unicorn user clicks \"Sign In\" button",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:55"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 757404900
+              "duration": 706707200
             }
           },
           {
@@ -75,11 +75,11 @@
             "line": 9,
             "name": "unicorn \"Welcome\" page should appear",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:24"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 956251500
+              "duration": 960750400
             }
           },
           {
@@ -88,11 +88,11 @@
             "line": 10,
             "name": "unicorn user enters new property address and deal number",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:76"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:72"
             },
             "result": {
               "status": "passed",
-              "duration": 2824604000
+              "duration": 2587243999
             }
           },
           {
@@ -101,11 +101,11 @@
             "line": 11,
             "name": "unicorn user selects transaction type as \"Sale\"",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:83"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:77"
             },
             "result": {
               "status": "passed",
-              "duration": 865526299
+              "duration": 806549600
             }
           },
           {
@@ -114,11 +114,11 @@
             "line": 12,
             "name": "unicorn user clicks \"Create New\" button",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:55"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 802442500
+              "duration": 772286699
             }
           },
           {
@@ -127,11 +127,11 @@
             "line": 13,
             "name": "unicorn \"Deal Details\" page should appear",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:24"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 632600699
+              "duration": 603129300
             }
           },
           {
@@ -140,11 +140,11 @@
             "line": 14,
             "name": "unicorn user selects property type as \"Commercial Land\"",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:92"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:85"
             },
             "result": {
               "status": "passed",
-              "duration": 2172779299
+              "duration": 2104435400
             }
           },
           {
@@ -153,11 +153,11 @@
             "line": 15,
             "name": "unicorn user selects payment type as \"Cash+Finance\"",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:100"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:93"
             },
             "result": {
               "status": "passed",
-              "duration": 752097300
+              "duration": 710999700
             }
           },
           {
@@ -166,11 +166,11 @@
             "line": 16,
             "name": "enters Loan amount as \"600\"",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:107"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:99"
             },
             "result": {
               "status": "passed",
-              "duration": 1699552199
+              "duration": 1583978899
             }
           },
           {
@@ -196,11 +196,11 @@
             "line": 17,
             "name": "unicorn user selects date range as:",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:117"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:104"
             },
             "result": {
               "status": "passed",
-              "duration": 4856348499
+              "duration": 4522067699
             }
           },
           {
@@ -209,11 +209,11 @@
             "line": 20,
             "name": "unicorn user enters deal agent name as \"Peter\"",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:134"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:110"
             },
             "result": {
               "status": "passed",
-              "duration": 1902238200
+              "duration": 1787278699
             }
           },
           {
@@ -222,11 +222,11 @@
             "line": 21,
             "name": "unicorn user uploads property photo",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:143"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:115"
             },
             "result": {
               "status": "passed",
-              "duration": 300182400
+              "duration": 278320099
             }
           },
           {
@@ -235,11 +235,11 @@
             "line": 22,
             "name": "unicorn user clicks \"submit\" button",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:55"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 841607500
+              "duration": 818209000
             }
           },
           {
@@ -248,11 +248,11 @@
             "line": 23,
             "name": "unicorn preview popup should appear",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:152"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:120"
             },
             "result": {
               "status": "passed",
-              "duration": 272520600
+              "duration": 277757899
             }
           },
           {
@@ -261,11 +261,11 @@
             "line": 24,
             "name": "unicorn user clicks \"Preview\" button",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:55"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 869162300
+              "duration": 854655200
             }
           },
           {
@@ -274,11 +274,11 @@
             "line": 25,
             "name": "unicorn \"Preview Details\" page should appear",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:24"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 2621250200
+              "duration": 2569565000
             }
           },
           {
@@ -328,11 +328,11 @@
             "line": 26,
             "name": "unicorn user verifies folowing details on preview page:",
             "match": {
-              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:159"
+              "location": "file:\\D:\\PuppeteerFramework\\features\\unicorn_features\\unicorn_stepdefinations\\PropertyDealSteps.js:126"
             },
             "result": {
               "status": "passed",
-              "duration": 5863947799
+              "duration": 5475913699
             }
           },
           {
@@ -340,7 +340,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 190539899
+              "duration": 212207399
             }
           }
         ],

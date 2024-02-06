@@ -15,3 +15,11 @@ Step-3 Then select "Command Prompt"
 Step-4 Restart VSCode
 Step-5 Goto view and select terminal
 
+Then in Terminal run Command 
+For Box app
+.\node_modules\.bin\cucumber-js --tags @login -f json:report/cucumber_report.json -f html:report.html
+.\node_modules\.bin\cucumber-js --tags @boxall -f json:report/cucumber_report.json -f html:report.html
+For unicorn app
+.\node_modules\.bin\cucumber-js --tags @unicorn -f json:report/cucumber_report.json -f html:report.html
+
+
